@@ -23,8 +23,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'teaspoon-mocha', :path => "/Users/harish/Development/BrowserStack/teaspoon/teaspoon-mocha"
-gem 'teaspoon', :path => "/Users/harish/Development/BrowserStack/teaspoon"
+gem 'teaspoon-mocha'
+gem 'teaspoon'
 gem 'selenium-webdriver'
 
 # Use ActiveModel has_secure_password

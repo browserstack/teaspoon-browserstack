@@ -149,7 +149,8 @@ Teaspoon.configure do |config|
     username: ENV['BROWSERSTACK_USERNAME'],
     access_key: ENV['BROWSERSTACK_ACCESS_KEY'],
     project: 'project',
-    build: 'build'
+    build: 'build',
+    max_parallel: 5
   }
 
   # Specify the timeout for the driver. Specs are expected to complete within this time frame or the run will be
