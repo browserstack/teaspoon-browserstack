@@ -1,16 +1,14 @@
-require_relative './spec_helper.rb'
+describe('add()', function() {
+  var tests = [
+    { args: [1, 2],       expected: 3  },
+    { args: [1, 2, 3],    expected: 6  },
+    { args: [1, 2, 3, 4], expected: 10 }
+  ];
 
-describe "Google's Search Functionality" do
-  it "can find search results", :run_on_browserstack => true do
-    @driver.manage.timeouts.implicit_wait = 10
-    @driver.navigate.to "http://www.google.com"
-
-    raise "Unable to load Google." unless @driver.title.include? "Google"
-
-    query = @driver.find_element :name, "q"
-    query.send_keys "BrowserStack"
-    query.submit
-
-    puts @driver.title
-  end
-end
+  tests.forEach(function(test) {
+    it('correctly adds ' + test.args.length + ' args', function() {
+      var res = add.apply(null, test.args);
+      expect(res).to.be(test.expected);
+    });
+  });
+});
